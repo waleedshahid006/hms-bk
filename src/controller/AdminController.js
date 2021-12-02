@@ -28,7 +28,6 @@ const GetEmployees = async (_req, res) => {
   try {
     const employees = await Employee.find();
     res.json(employees);
-    res.json({ message: "Employee has been registered successfully" });
   } catch (err) {
     console.error(err.message);
     res.status(500).send("Server error");
